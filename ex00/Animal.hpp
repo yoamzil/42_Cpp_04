@@ -31,7 +31,7 @@ class   Animal
         Animal  &operator=(Animal const &original);
         
         std::string    getType() const;
-        virtual void    makeSound();
+        virtual void    makeSound() const;
 };
 
 #endif

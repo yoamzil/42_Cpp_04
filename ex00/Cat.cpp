@@ -47,7 +47,7 @@ Cat  &Cat::operator=(Cat const &original)
 //     out << cat.getType;
 // }
 
-void    Cat::makeSound()
+void    Cat::makeSound() const
 {
     std::cout << "Meeeowww" << std::endl;
 }

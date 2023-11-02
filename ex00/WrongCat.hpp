@@ -14,22 +14,20 @@
 /*																						  */
 /* ************************************************************************************** */
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#ifndef WRONGCAT_HPP
+#define WRONGCAT_HPP
 
 #include <iostream>
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
-class   Cat : public Animal
+class   WrongCat : public WrongAnimal
 {
     private:
     public:
-        Cat();
-        ~Cat();
-        Cat(Cat const &original);
-        Cat  &operator=(Cat const &original);
-
-        // std::ostream    &operator<<(std::ostream &out, Cat &cat);
+        WrongCat();
+        ~WrongCat();
+        WrongCat(WrongCat const &original);
+        WrongCat  &operator=(WrongCat const &original);
 
         void    makeSound() const;
 };

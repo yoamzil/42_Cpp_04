@@ -42,7 +42,7 @@ Dog  &Dog::operator=(Dog const &original)
     return (*this);
 }
 
-void    Dog::makeSound()
+void    Dog::makeSound() const
 {
     std::cout << "3aaaaaw" << std::endl;
 }

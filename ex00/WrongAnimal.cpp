@@ -14,24 +14,40 @@
 /*																						  */
 /* ************************************************************************************** */
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#include "WrongAnimal.hpp"
 
-#include <iostream>
-#include "Animal.hpp"
-
-class   Cat : public Animal
+WrongAnimal::WrongAnimal()
 {
-    private:
-    public:
-        Cat();
-        ~Cat();
-        Cat(Cat const &original);
-        Cat  &operator=(Cat const &original);
+    std::cout << "WrongAnimal constructor called" << std::endl;
+    type = "WrongAnimal";
+}
 
-        // std::ostream    &operator<<(std::ostream &out, Cat &cat);
+WrongAnimal::~WrongAnimal()
+{
+    std::cout << "WrongAnimal destructor called" << std::endl;
+}
 
-        void    makeSound() const;
-};
+WrongAnimal::WrongAnimal(WrongAnimal const &original)
+{
+    std::cout << "WrongAnimal copy constructor called" << std::endl;
+    *this = original;
+}
 
-#endif
+WrongAnimal  &WrongAnimal::operator=(WrongAnimal const &original)
+{
+    if (this != &original)
+    {
+        this->type = original.type;
+    }
+    return (*this);
+}
+
+std::string    WrongAnimal::getType() const
+{
+    return (type);
+}
+
+void    WrongAnimal::makeSound() const
+{
+    std::cout << "WrongAnimal sound" << std::endl;
+}

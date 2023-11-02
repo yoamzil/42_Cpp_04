@@ -14,24 +14,24 @@
 /*																						  */
 /* ************************************************************************************** */
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#ifndef WRONGANIMAL_HPP
+#define WRONGANIMAL_HPP
 
 #include <iostream>
-#include "Animal.hpp"
 
-class   Cat : public Animal
+class   WrongAnimal
 {
-    private:
+    protected:
+        std::string     type;
+
     public:
-        Cat();
-        ~Cat();
-        Cat(Cat const &original);
-        Cat  &operator=(Cat const &original);
-
-        // std::ostream    &operator<<(std::ostream &out, Cat &cat);
-
-        void    makeSound() const;
+        WrongAnimal();
+        virtual ~WrongAnimal();
+        WrongAnimal(WrongAnimal const &original);
+        WrongAnimal  &operator=(WrongAnimal const &original);
+        
+        std::string     getType() const;
+        void            makeSound() const;
 };
 
 #endif
