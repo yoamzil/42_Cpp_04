@@ -26,12 +26,12 @@ class   Animal
 
     public:
         Animal();
-        ~Animal();
+        virtual ~Animal();
         Animal(Animal const &original);
         Animal  &operator=(Animal const &original);
-
-        virtual void    getType();
-        virtual void    makeSound() = 0;
+        
+        std::string    getType() const;
+        virtual void    makeSound();
 };
 
 #endif

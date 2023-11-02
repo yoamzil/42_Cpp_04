@@ -19,6 +19,7 @@
 Dog::Dog()
 {
     std::cout << "Dog constructor called" << std::endl;
+    type = "Dog";
 }
 
 Dog::~Dog()
@@ -39,11 +40,6 @@ Dog  &Dog::operator=(Dog const &original)
         this->type = original.type;
     }
     return (*this);
-}
-
-void    Dog::getType()
-{
-    type = "Dog";
 }
 
 void    Dog::makeSound()

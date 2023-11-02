@@ -19,6 +19,7 @@
 Animal::Animal()
 {
     std::cout << "Animal constructor called" << std::endl;
+    type = "Animal";
 }
 
 Animal::~Animal()
@@ -41,7 +42,12 @@ Animal  &Animal::operator=(Animal const &original)
     return (*this);
 }
 
-void    Animal::getType()
+std::string    Animal::getType() const
 {
-    type = "Animal";
+    return (type);
+}
+
+void    Animal::makeSound()
+{
+    std::cout << "Animal sound" << std::endl;
 }

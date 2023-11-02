@@ -19,6 +19,7 @@
 Cat::Cat()
 {
     std::cout << "Cat constructor called" << std::endl;
+    type = "Cat";
 }
 
 Cat::~Cat()
@@ -41,15 +42,10 @@ Cat  &Cat::operator=(Cat const &original)
     return (*this);
 }
 
-std::ostream    &Cat::operator<<(std::ostream &out, Cat &cat)
-{
-    out << cat.getType;
-}
-
-void    Cat::getType()
-{
-    type = "Cat";
-}
+// std::ostream    &Cat::operator<<(std::ostream &out, Cat &cat)
+// {
+//     out << cat.getType;
+// }
 
 void    Cat::makeSound()
 {

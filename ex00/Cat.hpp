@@ -29,9 +29,8 @@ class   Cat : public Animal
         Cat(Cat const &original);
         Cat  &operator=(Cat const &original);
 
-        std::ostream    &operator<<(std::ostream &out, Cat &cat);
+        // std::ostream    &operator<<(std::ostream &out, Cat &cat);
 
-        void    getType();
         void    makeSound();
 };
 

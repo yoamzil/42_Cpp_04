@@ -29,13 +29,13 @@ int main()
 	// j->makeSound();
 	// meta->makeSound();
 
-	// Animal	a;
-	Cat		b;
-	Dog		c;
-
-	// b.makeSound();
-	// c.makeSound();
-	std::cout << b.getType() << "'s sound is " << b.makeSound() << std::endl;
-	std::cout << c.getType() << "'s sound is " << c.makeSound() << std::endl;
+	Animal	*a = new Cat();
+	// Cat		b;
+	// Dog		c;
+	// c.makeSound();b.makeSound()
+	std::cout << a->getType() << "'s sound is ";
+	a->makeSound();
+	delete a;
+	// std::cout << c.getType() << "'s sound is " << c.makeSound() << std::endl;
 	return (0);
 }
