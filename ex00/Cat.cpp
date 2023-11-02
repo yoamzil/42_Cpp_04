@@ -40,3 +40,18 @@ Cat  &Cat::operator=(Cat const &original)
     }
     return (*this);
 }
+
+std::ostream    &Cat::operator<<(std::ostream &out, Cat &cat)
+{
+    out << cat.getType;
+}
+
+void    Cat::getType()
+{
+    type = "Cat";
+}
+
+void    Cat::makeSound()
+{
+    std::cout << "Meeeowww" << std::endl;
+}

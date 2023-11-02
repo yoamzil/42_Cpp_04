@@ -29,6 +29,9 @@ class   Animal
         ~Animal();
         Animal(Animal const &original);
         Animal  &operator=(Animal const &original);
+
+        virtual void    getType();
+        virtual void    makeSound() = 0;
 };
 
 #endif

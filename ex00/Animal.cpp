@@ -40,3 +40,8 @@ Animal  &Animal::operator=(Animal const &original)
     }
     return (*this);
 }
+
+void    Animal::getType()
+{
+    type = "Animal";
+}

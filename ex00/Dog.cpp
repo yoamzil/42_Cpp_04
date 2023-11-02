@@ -40,3 +40,13 @@ Dog  &Dog::operator=(Dog const &original)
     }
     return (*this);
 }
+
+void    Dog::getType()
+{
+    type = "Dog";
+}
+
+void    Dog::makeSound()
+{
+    std::cout << "3aaaaaw" << std::endl;
+}

@@ -28,6 +28,11 @@ class   Cat : public Animal
         ~Cat();
         Cat(Cat const &original);
         Cat  &operator=(Cat const &original);
+
+        std::ostream    &operator<<(std::ostream &out, Cat &cat);
+
+        void    getType();
+        void    makeSound();
 };
 
 #endif
