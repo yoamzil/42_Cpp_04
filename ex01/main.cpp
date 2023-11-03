@@ -20,9 +20,20 @@
 
 int main()
 {
-	const Animal *j = new Dog();
-	const Animal *i = new Cat();
-	delete j; // should not create a leak
-	delete i;
+	int	count = 1;
+	Animal *animalAarry[count];
+
+	for (int i = 0; i < (count / 2); i++)
+	{
+		animalAarry[i] = new Cat();
+	}
+	for (int i = (count / 2); i < count; i++)
+	{
+		animalAarry[i] = new Dog();
+	}
+	for (int i = 0; i < count; i++)
+	{
+		delete animalAarry[i];
+	}
 	return (0);
 }
