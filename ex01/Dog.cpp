@@ -15,16 +15,19 @@
 /* ************************************************************************************** */
 
 #include "Dog.hpp"
+#include "Brain.hpp"
 
 Dog::Dog()
 {
     std::cout << "Dog constructor called" << std::endl;
     type = "Dog";
+    pointer = new Brain();
 }
 
 Dog::~Dog()
 {
     std::cout << "Dog destructor called" << std::endl;
+    delete pointer;
 }
 
 Dog::Dog(Dog const &original)

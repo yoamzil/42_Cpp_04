@@ -15,16 +15,19 @@
 /* ************************************************************************************** */
 
 #include "Cat.hpp"
+#include "Brain.hpp"
 
 Cat::Cat()
 {
     std::cout << "Cat constructor called" << std::endl;
     type = "Cat";
+    pointer = new Brain();
 }
 
 Cat::~Cat()
 {
     std::cout << "Cat destructor called" << std::endl;
+    delete pointer;
 }
 
 Cat::Cat(Cat const &original)

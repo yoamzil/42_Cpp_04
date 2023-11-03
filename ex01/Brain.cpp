@@ -36,7 +36,8 @@ Brain  &Brain::operator=(Brain const &original)
 {
     if (this != &original)
     {
-        this->ideas = original.ideas;
+        for (int i = 0; i < 100; i++)
+            this->ideas[i]= original.ideas[i];
     }
     return (*this);
 }
