@@ -18,5 +18,5 @@
 
 ICharacter::~ICharacter()
 {
-    std::cout << "Character destructor called" << std::endl;
+    std::cout << "ICharacter destructor called" << std::endl;
 }
