@@ -14,20 +14,28 @@
 /*																						  */
 /* ************************************************************************************** */
 
-#ifndef ICHARACTER_HPP
-#define ICHARACTER_HPP
+#include "Cure.hpp"
 
-#include <iostream>
-#include "AMateria.hpp"
-
-class ICharacter
+Cure::Cure()
 {
-    public:
-        virtual ~ICharacter();
-        virtual std::string const &getName() const = 0;
-        virtual void equip(AMateria *m) = 0;
-        virtual void unequip(int idx) = 0;
-        virtual void use(int idx, ICharacter &target) = 0;
-};
+    std::cout << "Cure default constructor called" << std::endl;
+}
 
-#endif
+Cure::~Cure()
+{
+    std::cout << "Cure destructor called" << std::endl;
+}
+
+Cure::Cure(Cure const &original)
+{
+    std::cout << "Cure copy constructor called" << std::endl;
+    *this = original;
+}
+
+Cure    &Cure::operator=(Cure const &original)
+{
+    if (this != &original)
+    {
+    }
+    return (*this);
+}

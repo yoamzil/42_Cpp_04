@@ -16,5 +16,7 @@
 
 #include "ICharacter.hpp"
 
-// ICharacter::~ICharacter()
-// {}
+ICharacter::~ICharacter()
+{
+    std::cout << "Character destructor called" << std::endl;
+}

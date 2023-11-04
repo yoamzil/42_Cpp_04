@@ -44,3 +44,9 @@ AMateria::AMateria(std::string const &type)
 {
     std::cout << "Parameterized constructor called" << std::endl;
 }
+
+std::string const &AMateria::getType() const
+{}
+
+void    AMateria::use(ICharacter &target)
+{}

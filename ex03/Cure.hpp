@@ -14,20 +14,23 @@
 /*																						  */
 /* ************************************************************************************** */
 
-#ifndef ICHARACTER_HPP
-#define ICHARACTER_HPP
+#ifndef CURE_HPP
+#define CURE_HPP
 
 #include <iostream>
+#include "ICharacter.hpp"
 #include "AMateria.hpp"
 
-class ICharacter
+class Cure : public AMateria
 {
-    public:
-        virtual ~ICharacter();
-        virtual std::string const &getName() const = 0;
-        virtual void equip(AMateria *m) = 0;
-        virtual void unequip(int idx) = 0;
-        virtual void use(int idx, ICharacter &target) = 0;
+    private:
+
+    public :
+        Cure();
+        ~Cure();
+        Cure(Cure const &original);
+        Cure    &operator=(Cure const &original);
+
 };
 
 #endif

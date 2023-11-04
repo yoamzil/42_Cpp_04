@@ -14,20 +14,28 @@
 /*																						  */
 /* ************************************************************************************** */
 
-#ifndef ICHARACTER_HPP
-#define ICHARACTER_HPP
+#include "Ice.hpp"
 
-#include <iostream>
-#include "AMateria.hpp"
-
-class ICharacter
+Ice::Ice()
 {
-    public:
-        virtual ~ICharacter();
-        virtual std::string const &getName() const = 0;
-        virtual void equip(AMateria *m) = 0;
-        virtual void unequip(int idx) = 0;
-        virtual void use(int idx, ICharacter &target) = 0;
-};
+    std::cout << "Ice default constructor called" << std::endl;
+}
 
-#endif
+Ice::~Ice()
+{
+    std::cout << "Ice destructor called" << std::endl;
+}
+
+Ice::Ice(Ice const &original)
+{
+    std::cout << "Ice copy constructor called" << std::endl;
+    *this = original;
+}
+
+Ice    &Ice::operator=(Ice const &original)
+{
+    if (this != &original)
+    {
+    }
+    return (*this);
+}
