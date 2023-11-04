@@ -31,6 +31,8 @@ class Cure : public AMateria
         Cure(Cure const &original);
         Cure    &operator=(Cure const &original);
 
+        AMateria    *clone() const;
+        void        use(ICharacter &target);
 };
 
 #endif

@@ -31,6 +31,8 @@ class Ice : public AMateria
         Ice(Ice const &original);
         Ice    &operator=(Ice const &original);
 
+        AMateria    *clone() const;
+        void        use(ICharacter &target);
 };
 
 #endif

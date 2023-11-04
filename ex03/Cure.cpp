@@ -38,4 +38,4 @@ Cure    &Cure::operator=(Cure const &original)
     {
     }
     return (*this);
-}
+} 

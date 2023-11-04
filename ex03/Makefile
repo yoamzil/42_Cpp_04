@@ -1,9 +1,9 @@
 CXX			=	c++
 CXXFLAGS	=	-Wall -Werror -Wextra -std=c++98
 NAME		=	AMateria
-SRCS		=	main.cpp AMateria.cpp ICharacter.cpp
+SRCS		=	main.cpp AMateria.cpp ICharacter.cpp Ice.cpp Cure.cpp
 OBJS		=	$(SRCS:.cpp=.o)
-HFS			=	AMateria.hpp ICharacter.hpp
+HFS			=	AMateria.hpp ICharacter.hpp Ice.hpp Cure.hpp
 
 %.o			:	%.cpp $(HFS)
 				$(CXX) $(CXXFLAGS) -c $< -o $@
