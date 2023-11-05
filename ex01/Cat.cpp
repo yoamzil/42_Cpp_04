@@ -21,6 +21,7 @@ Cat::Cat()
 {
     std::cout << "Cat constructor called" << std::endl;
     type = "Cat";
+
     pointer = new Brain();
 }
 
@@ -33,6 +34,7 @@ Cat::~Cat()
 Cat::Cat(Cat const &original)
 {
     std::cout << "Cat copy constructor called" << std::endl;
+	
     *this = original;
 }
 
@@ -40,6 +42,8 @@ Cat  &Cat::operator=(Cat const &original)
 {
     if (this != &original)
     {
+		delete pointer;
+		this->pointer = new Brain(*original.pointer);
         this->type = original.type;
     }
     return (*this);

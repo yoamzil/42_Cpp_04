@@ -20,20 +20,27 @@
 
 int main()
 {
-	int	count = 1;
-	Animal *animalAarry[count];
+	Dog *basic  = new Dog();
+	{
+	Dog *tmp = new Dog(*basic);
+	delete basic;
+	delete tmp;
+	}
 
-	for (int i = 0; i < (count / 2); i++)
-	{
-		animalAarry[i] = new Cat();
-	}
-	for (int i = (count / 2); i < count; i++)
-	{
-		animalAarry[i] = new Dog();
-	}
-	for (int i = 0; i < count; i++)
-	{
-		delete animalAarry[i];
-	}
-	return (0);
+	// int	count = 1;
+	// Animal *animalAarry[count];
+
+	// for (int i = 0; i < (count / 2); i++)
+	// {
+	// 	animalAarry[i] = new Cat();
+	// }
+	// for (int i = (count / 2); i < count; i++)
+	// {
+	// 	animalAarry[i] = new Dog();
+	// }
+	// for (int i = 0; i < count; i++)
+	// {
+	// 	delete animalAarry[i];
+	// }
+	// return (0);
 }
