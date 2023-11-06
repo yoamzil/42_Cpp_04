@@ -40,6 +40,8 @@ Dog  &Dog::operator=(Dog const &original)
 {
     if (this != &original)
     {
+		delete pointer;
+		this->pointer = new Brain(*original.pointer);
         this->type = original.type;
     }
     return (*this);
